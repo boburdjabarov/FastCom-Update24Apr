@@ -1,14 +1,19 @@
 import React from "react";
 import _ from "lodash";
 import PropTypes from "prop-types";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 const Pagination = (props) => {
     const { itemsCount, pageSize, onPageChange, currentPage } = props;
-    const pageCount = Math.ceil(itemsCount / pageSize); //Math ceil is needed since we need integers
+    const pageCount = Math.ceil(itemsCount / pageSize); // Math ceil is needed since we need integers
     if (pageCount === 1) return null; // shows the quantity of pages, so if only one page, the page icon will dissapear
+
+    // console.log(itemsCount);
+    // console.log(pageSize);
+    // console.log(currentPage);
+    // console.log(itemsCount);
+
     const pages = _.range(1, pageCount + 1);
-    //   console.log(pages);
+    // console.log(pages);
 
     //   console.log(pageCount);
     return (
