@@ -13,11 +13,11 @@ module.exports = {
     },
 
     rules: {
-        indent: ["error", 4],
+        indent: ["off", 4],
         semi: [2, "always"],
         "space-before-function-paren": [
             "error",
-            { anonymus: "always", named: "never" }
+            { anonymous: "always", named: "never" }
         ],
         // "multiline-ternary": ["error", "always-multiline"],
         quotes: ["error", "double", { allowTemplateLiterals: true }],

@@ -1,17 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Bookmarks = (props) => {
-    let classes = "bi bi-bookmark-star";
-    //   console.log(classes);
-    if (props.bookmark) classes += "-fill";
+const BookMark = ({ status, ...rest }) => {
     return (
-        <i
-            onClick={props.onClick}
-            style={{ cursor: "pointer" }}
-            className={classes}
-            aria-hidden="true"
-        />
+        <button {...rest}>
+            <i className={"bi bi-bookmark" + (status ? "-heart-fill" : "")}></i>
+        </button>
     );
 };
+BookMark.propTypes = {
+    status: PropTypes.bool
+};
 
-export default Bookmarks;
+export default BookMark;

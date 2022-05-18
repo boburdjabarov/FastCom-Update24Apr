@@ -8,10 +8,10 @@ const GroupList = ({
     selectedItem
 }) => {
     // console.log(items.map(item));
-    const isArray = Array.isArray(items);
-    console.log(isArray);
+    // const isArray = Array.isArray(items);
+    // console.log(isArray);
 
-    if (Array.isArray(items)) {
+    if (!Array.isArray(items)) {
         return (
             <ul name="list-group">
                 {Object.keys(items).map((item) => (
@@ -34,7 +34,7 @@ const GroupList = ({
             <ul name="list-group">
                 {items.map((item) => (
                     <li
-                        key={items._id}
+                        key={item._id}
                         className={
                             "list-group-item" +
                             (item === selectedItem ? " active" : "") // !!!!!!!!!!!!!!!!!!! //
